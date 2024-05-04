@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="FONTS/fontawesome/css/all.css" />
+    <link rel="shortcut icon" href="IMG/Logo-Icono.png" type="image/x-icon" />
+    <link rel="stylesheet" href="Styles/Styles.css" />
+    <title>TIENDA ONLINE</title>
+  </head>
+  <body>
+    <!-- MENU PRINCIPAL -->
+    <nav class="menu">
+      <div class="menu__Logo">
+        <img src="IMG/Logo-Icono.png" alt="" class="menu__imgLogo" />
+      </div>
+
+      <div class="menu__enlaces">
+        <a href="" class="menu__a menu__a--efecto activo">Inicio</a>
+        <a href="#productos" class="menu__a menu__a--efecto">Productos</a>
+        <a href="#destacado" class="menu__a menu__a--efecto">destacado</a>
+        <a href="#contacto" class="menu__a menu__a--efecto">Contacto</a>
+      </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header__div">
+        <h1 class="header__h1">Lo que buscas lo tenemos para tí</h1>
+        <button class="btn btn--efecto header__btn">Productos</button>
+      </div>
+    </header>
+
+    <!-- PRODUCTOS -->
+    <section class="productos" id="productos">
+      <h1 class="titulo">Nuestros Productos</h1>
+
+      <div class="productos__card productos__card--efecto">
+        <div class="productos__contImg">
+          <img src="IMG/imgProducto1.png" alt="" class="productos__img"/>
+        </div>
+
+        <div class="productos__elementos">
+          <h3 class="productos__h3">Smartphon</h3>
+          <h2 class="productos__precio">$ 900.000</h2>
+          <a href="#" class="btn productos__btnComprar productos__btnComprar--efecto">Comprar</a>
+        </div>
+      </div>
+
+      <div class="productos__card productos__card--efecto">
+        <div class="productos__contImg">
+          <img src="IMG/imgProducto2.png" alt="" class="productos__img"/>
+        </div>
+
+        <div class="productos__elementos">
+          <h3 class="productos__h3">Proyector</h3>
+          <h2 class="productos__precio">$ 3.100.000</h2>
+          <a href="#" class="btn productos__btnComprar">Comprar</a>
+        </div>
+      </div>
+
+      <div class="productos__card productos__card--efecto">
+        <div class="productos__contImg">
+          <img src="IMG/imgProducto3.png" alt="" class="productos__img"/>
+        </div>
+
+        <div class="productos__elementos">
+          <h3 class="productos__h3">Tarjeta Gráfica</h3>
+          <h2 class="productos__precio">$ 4.500.000</h2>
+          <a href="#" class="btn productos__btnComprar">Comprar</a>
+        </div>
+      </div>
+
+      <div class="productos__card productos__card--efecto">
+        <div class="productos__contImg">
+          <img src="IMG/imgProducto4.png" alt="" class="productos__img"/>
+        </div>
+
+        <div class="productos__elementos">
+          <h3 class="productos__h3">Cámara Digital</h3>
+          <h2 class="productos__precio">$ 12.400.000</h2>
+          <a href="#" class="btn productos__btnComprar">Comprar</a>
+        </div>
+      </div>
+
+      <div class="productos__card productos__card--efecto">
+        <div class="productos__contImg">
+          <img src="IMG/imgProducto5.png" alt="" class="productos__img"/>
+        </div>
+
+        <div class="productos__elementos">
+          <h3 class="productos__h3">PC Gamer</h3>
+          <h2 class="productos__precio">$ 3.800.000</h2>
+          <a href="#" class="btn productos__btnComprar">Comprar</a>
+        </div>
+      </div>
+
+      <div class="productos__card productos__card--efecto">
+        <div class="productos__contImg">
+          <img src="IMG/imgProducto6.png" alt="" class="productos__img"/>
+        </div>
+
+        <div class="productos__elementos">
+          <h3 class="productos__h3">Consolas</h3>
+          <h2 class="productos__precio">$ 1.700.000</h2>
+          <a href="#" class="btn productos__btnComprar">Comprar</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- MENSAJE / INDICADOR -->
+    <section class="mensaje">
+      <p class="mensaje__txt">Te traemos solo lo mejor</p>
+    </section>
+
+
+    <!-- DESTACADOS / FAVORITOS -->
+    <section class="favoritos" id="destacado">
+      <h1 class="titulo">Producto destacado</h1>
+
+      <div class="favoritos__contenedor">
+        <div class="favoritos__contImg favoritos__contImg--efecto favoritos__posicionamiento">
+          <img src="IMG/imgProducto3.png" alt="" class="favoritos__img favoritos__img--efecto">
+        </div>
+
+        <div class="favoritos__contenido favoritos__posicionamiento">
+          <div class="favoritos__id">
+            <h1 class="favoritos__h1">Nvidia RTX 3090</h1>
+            <h3 class="favoritos__h3">Tarjeta Gráfica</h3>
+          </div>
+
+          <div class="favoritos__contTxt">
+            <p class="favoritos_txt">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nulla temporibus animi numquam quos enim modi sed aliquid delectus! Placeat ad sint ab voluptatibus vero nam laudantium veritatis corporis. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil vero nulla temporibus animi numquam quos enim modi sed aliquid delectus! Placeat ad sint ab voluptatibus vero nam laudantium veritatis corporis!</p>
+          </div>
+
+          <div class="favoritos__contTxtInferior">
+            <p class="favoritos__precio">$ 4.500.000</p>
+            <button class="btn btn--efecto favoritos__comprar">Comprar</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CONTACTO -->
+    <section class="contacto" id="contacto">
+      <div class="contacto__buscar contacto__buscar--efecto">
+        <input type="text" placeholder="Ingresa tu E-mail" class="contacto__input">
+        <i class="fas fa-paper-plane contacto__icono contacto__icono--efecto"></i>
+      </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="piePagina">
+      <div class="piePagina__socialMedia piePagina__socialMedia--efecto">
+        <a href="#" class="piePagina__icono"><span class="fab fa-facebook"></span></a>
+      </div>
+
+      <div class="piePagina__socialMedia piePagina__socialMedia--efecto">
+        <a href="#" class="piePagina__icono"><span class="fab fa-twitter"></span></a>
+      </div>
+
+      <div class="piePagina__socialMedia piePagina__socialMedia--efecto">
+        <a href="#" class="piePagina__icono"><span class="fab fa-instagram"></span></a>
+      </div>
+
+      <div class="piePagina__socialMedia piePagina__socialMedia--efecto">
+        <a href="#" class="piePagina__icono"><span class="fab fa-youtube"></span></a>
+      </div>
+    </footer>
+  </body>
+</html>

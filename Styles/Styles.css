@@ -1,0 +1,514 @@
+/* VARIABLES */
+:root {
+  --colorPrimario: #136bee;
+  --colorSecundario: #0a5ad1;
+  --colorOscuro: #0e2f6d;
+}
+
+
+
+/* ESTILOS GENERALES PARA EL DOCUMENTO HTML */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/* ESTILOS GENERALES PARA LOS BOTONES */
+.btn{
+  background-color: var(--colorPrimario);
+  color: #FFF;
+  border: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+.btn--efecto:hover{
+  transform: scale(1.1);
+  background-color: var(--colorSecundario);
+}
+
+/* ESTILOS GENERALES PARA LOS H1 */
+.titulo{
+  text-align: center;
+  font-weight: 500;
+  font-size: 60px;
+  letter-spacing: 2px;
+  margin: 30px 0;
+}
+
+
+/* /////////////////////////////////////////////////////////////////////////////////// */
+
+
+/* MENU PRINCIPAL */
+.menu {
+  width: 100%;
+  height: 110px;
+  background-color: #fff;
+}
+
+.menu__Logo,
+.menu__enlaces {
+  float: left;
+}
+
+.menu__Logo {
+  height: 100%;
+}
+
+.menu__imgLogo {
+  width: 50%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu__a {
+  text-decoration: none;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  line-height: 110px;
+  margin: 0 20px;
+  color: #000;
+  padding: 4px 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  transition: all 0.5s;
+}
+
+.menu__a.activo {
+  color: var(--colorPrimario);
+}
+
+.menu__a--efecto:hover {
+  border: 2px solid var(--colorPrimario);
+}
+
+
+
+/* HEADER */
+.header{
+  width: 100%;
+  height: calc(100vh - 110px);
+  position: relative;
+  background-image: url("../IMG/imgHeader.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.header__div{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.header__h1{
+  color: #fff;
+  font-size: 60px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  margin: 20px 0;
+  text-shadow: 3px 0 10px #FFF;
+}
+
+.header__btn{
+  width: 180px;
+  height: 50px;
+}
+
+
+/* PRODUCTOS */
+.productos{
+  padding: 30px 100px;
+}
+
+.productos__card{
+  width: 33%;
+  height: 420px;
+  background-color: var(--colorOscuro);
+  overflow: hidden;
+  float: left;
+  border: none;
+  margin: 1px;
+
+  position: relative;
+}
+
+.productos__card::before{
+  width: 100%;
+  height: 100%;
+  background-color: var(--colorPrimario);
+
+  content: '';
+  position: absolute;
+  top: -50%;
+  transform: skewY(345deg);
+  transition: all 0.5s;
+}
+
+.productos__card--efecto:hover::before{
+  top: -70%;
+  transform: skewY(390deg);
+}
+
+.productos__card::after{
+  content: 'Technology';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  font-weight: 600;
+  font-size: 8em;
+  color: rgba(0, 0, 0, 0.1);
+}
+
+.productos__contImg{
+  width: 100%;
+
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.productos__img{
+  max-width: 70%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+.productos__card:hover .productos__img{
+  max-width: 60%;
+}
+
+.productos__elementos{
+  width: 100%;
+  text-align: center;
+
+  position: absolute;
+  bottom: 12%;
+  z-index: 1;
+}
+
+.productos__h3{
+  font-size: 2vw;
+  color: #FFF;
+  font-weight: 600;
+  text-transform: uppercase;letter-spacing: 1px;
+}
+
+.productos__precio{
+  font-size: 30px;
+  color: #FFF;
+  font-weight: 200;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.productos__btnComprar{
+  opacity: 0;
+  padding: 10px 30px;
+  margin-top: 15px;
+  
+  position: relative;
+  top: 200px; 
+}
+
+.productos__card:hover .productos__elementos .productos__btnComprar{
+  top: 20px;
+  opacity: 1;
+}
+
+
+/* MENSAJE / INDICADOR */
+.mensaje{
+  width: 100%;
+  height: 400px;
+  background-image: url("../IMG/imgMsj.png");
+  background-size: cover;
+  background-attachment: fixed;
+  margin-top: 50px;
+
+  display: inline-block;
+  position: relative;
+
+}
+
+.mensaje::before{
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mensaje__txt{
+  width: 100%;
+  text-align: center;
+  color: #FFF;
+  font-size: 70px;
+  font-weight: 200;
+  text-shadow: 3px 0 10px #FFF;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* DESTACADOS / FAVORITOS */
+.favoritos{
+  height: 100vh;
+  padding: 20px 150px;
+
+  position: relative;
+}
+
+.favoritos::before{
+  font-weight: 600;
+  font-size: 10vw;
+  color: rgba(0, 0, 0, 0.1);
+
+  content: 'Technology';
+  position: absolute;
+  bottom: 2%;
+  left: 0;
+  z-index: -1;
+}
+
+.favoritos::after{
+  font-weight: 600;
+  font-size: 10vw;
+  color: rgba(0, 0, 0, 0.1);
+
+  content: 'Best';
+  position: absolute;
+  top: 2%;
+  right: 0;
+  z-index: -1;
+}
+
+.favoritos__contenedor > .favoritos__posicionamiento {
+  float: left;
+  margin: 30px;
+}
+
+.favoritos__contImg{
+  width: 40%;
+  position: relative;
+}
+
+.favoritos__img{
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.favoritos__contImg::before{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 50%;
+  color: #FFF;
+  transform: rotate(-10deg);
+  box-shadow: 0 0 10px 5px var(--colorSecundario);
+  
+  content: 'Best Choise';
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--colorSecundario);
+  z-index: 1;
+  transition: all 0.5s;
+}
+
+.favoritos__contImg--efecto:hover::before{
+  transform: scale(1.2) rotate(-10deg);
+}
+
+.favoritos__img--efecto:hover{
+  transform: scale(1.1);
+}
+
+.favoritos__contenido{
+  width: 40%;
+  height: 100%;
+}
+
+.favoritos__h1{
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.favoritos__h3{
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: var(--colorSecundario);
+}
+
+.favoritos_txt{
+  text-align: justify;
+  margin: 20px 0;
+}
+
+.favoritos__contTxtInferior{
+  width: 100%;
+  height: 50px;
+}
+
+.favoritos__precio{
+  float: left;
+  font-size: 40px;
+  line-height: 50px;
+  font-weight: 600;
+  color: var(--colorOscuro);
+}
+
+.favoritos__comprar{
+  width: 150px;
+  line-height: 50px;
+  float: right;
+}
+
+
+
+/* CONTACTO */
+.contacto{
+  width: 100%;
+  height: 300px;
+  background-color: var(--colorOscuro);
+  margin-top: 30px;
+
+  position: relative;
+}
+
+.contacto::before{
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 15vw;
+  color: rgba(0, 0, 0, 0.08);
+
+  content: 'Suscribete';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.contacto__buscar{
+  width: 60px;
+  height: 60px;
+  background-color: #E5E5E5;
+  padding: 10px;
+  border-radius: 50px;
+
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s;
+}
+
+.contacto__buscar--efecto:hover{
+  width: 400px;
+}
+
+.contacto__buscar--efecto:hover .contacto__input{
+  width: 90%;
+}
+
+.contacto__buscar--efecto:hover .contacto__icono{
+  background-color: var(--colorPrimario);
+  color: #FFF;
+}
+
+.contacto__input{
+  width: 0;
+  height: 100%;
+  border: none;
+  outline: none;
+  padding: 0 10px;
+  font-size: 16px;
+  background: none;
+  color: #000;
+  float: left;
+  transition: all 0.5s;
+}
+
+.contacto__icono{
+  width: 60px;
+  height: 60px;
+  color: var(--colorPrimario);
+  border-radius: 50%;
+  line-height: 60px !important;
+  text-align: center;
+  font-size: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: all 0.5s;
+}
+
+.contacto__icono--efecto:hover{
+  transform: scale(1.2);
+}
+
+
+/* FOOTER */
+.piePagina{
+  width: 100%;
+  height: 100px;
+  background-color: #0b2049;
+}
+
+.piePagina__socialMedia{
+  width: 25%;
+  height: 100%;
+  line-height: 100px;
+  float: left;
+  transition: all 0.5s;
+}
+
+.piePagina__socialMedia--efecto:hover{
+  background-color: #07142c;
+}
+
+.piePagina__socialMedia--efecto:hover .piePagina__icono{
+  font-size: 35px;
+}
+
+.piePagina__icono{
+  display: block;
+  text-align: center;
+  font-size: 30px;
+  color: #CCC;
+  transition: all 0.5s;
+}
